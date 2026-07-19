@@ -42,7 +42,7 @@ O notebook faz automaticamente: clone do YOLOv5, instalação das dependências,
 ### Opção 2 — Máquina local com GPU
 
 ```bash
-git clone https://github.com/SEU_USUARIO/yolov5-deteccao-objetos-cotidianos.git
+git clone https://github.com/MauroGutMB/yolov5-deteccao-objetos-cotidianos.git
 cd yolov5-deteccao-objetos-cotidianos
 pip install jupyter
 jupyter notebook deteccao_yolov5_coco.ipynb
@@ -65,14 +65,14 @@ A única variável manipulada é a resolução de entrada, garantindo comparaç�
 
 | Métrica | 416×416 | 640×640 |
 |---|---|---|
-| mAP@0.5 | _preencher_ | _preencher_ |
-| mAP@0.5:0.95 | _preencher_ | _preencher_ |
-| Precisão | _preencher_ | _preencher_ |
-| Recall | _preencher_ | _preencher_ |
-| F1-score | _preencher_ | _preencher_ |
-| FPS | _preencher_ | _preencher_ |
+| mAP@0.5 | 0.4288 | **0.4719** |
+| mAP@0.5:0.95 | 0.2554 | **0.2849** |
+| Precisão | 0.5954 | **0.6073** |
+| Recall | 0.4099 | **0.4456** |
+| F1-score | 0.4856 | **0.5140** |
+| FPS | **159.2** | 141.6 |
 
-> Preencha após a execução com a tabela gerada na Seção 5 do notebook (`tabela_comparativa.csv`).
+A resolução 640×640 venceu em todas as métricas de acurácia (+10,1% relativo em mAP@0.5), com os maiores ganhos nas classes pequenas (*bottle*, *cup*) e de estrutura fina (*bicycle*). A resolução 416×416 foi apenas 12,4% mais rápida na GPU T4 — bem abaixo da razão teórica de custo (~2,37×), pois pré-processamento e NMS não dependem da resolução.
 
 ## 📚 Referências principais
 

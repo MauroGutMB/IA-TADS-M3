@@ -74,8 +74,3 @@ A única variável manipulada é a resolução de entrada, garantindo comparaç�
 
 A resolução 640×640 venceu em todas as métricas de acurácia (+10,1% relativo em mAP@0.5), com os maiores ganhos nas classes pequenas (*bottle*, *cup*) e de estrutura fina (*bicycle*). A resolução 416×416 foi apenas 12,4% mais rápida na GPU T4 — bem abaixo da razão teórica de custo (~2,37×), pois pré-processamento e NMS não dependem da resolução.
 
-## 📚 Referências principais
-
-- Redmon et al. *You Only Look Once: Unified, Real-Time Object Detection.* CVPR 2016.
-- Jocher et al. *YOLOv5 by Ultralytics.* GitHub, 2020.
-- Lin et al. *Microsoft COCO: Common Objects in Context.* ECCV 2014.
